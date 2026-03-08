@@ -7,6 +7,10 @@ url: "https://thysrael.github.io" # the base hostname & protocol for your site, 
 # Build settings
 markdown: kramdown
 future: true # Allow future posts to be published
+plugins:
+  - jekyll-feed
+feed:
+  path: feed.xml
 exclude:
   - ".github"
   - "node_modules"
