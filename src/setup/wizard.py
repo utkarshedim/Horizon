@@ -361,11 +361,17 @@ def main():
     interests = get_interests()
 
     # Step 3: Preset library matching
-    console.print("\n[dim]Matching against preset source library...[/dim]")
+    console.print("\n[dim]Fetching preset source library...[/dim]")
     try:
-        presets = load_presets()
+        presets = load_presets(prefer_api=True)
+        offline = os.environ.get("HORIZON_OFFLINE", "").lower() in ("1", "true", "yes")
+        if offline:
+            console.print("[dim]Using local presets (offline mode)[/dim]")
+        else:
+            console.print("[dim]Loaded preset sources from API[/dim]")
     except FileNotFoundError:
-        console.print("[yellow]Presets file not found, skipping preset matching.[/yellow]")
+        console.print("[yellow]Could not fetch presets (offline and no local file).[/yellow]")
+        console.print("[yellow]Skipping preset matching.[/yellow]")
         presets = {"domains": []}
 
     matched = match_domains(interests, presets)
