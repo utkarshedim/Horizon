@@ -47,13 +47,17 @@
 <br>
 <table>
 <tr>
-<td width="50%">
+<td width="33.33%">
 <p align="center"><strong>Terminal Output</strong></p>
 <img src="docs/assets/terminal_log.png" alt="Terminal Output" />
 </td>
-<td width="50%">
+<td width="33.33%">
 <p align="center"><strong>Feishu Notification</strong></p>
 <img src="docs/assets/feishu_en.png" alt="Feishu Notification" />
+</td>
+<td width="33.33%">
+<p align="center"><strong>Email Delivery</strong></p>
+<img src="docs/assets/email.png" alt="Email Delivery" />
 </td>
 </tr>
 </table>

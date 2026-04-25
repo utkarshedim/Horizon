@@ -47,13 +47,17 @@
 <br>
 <table>
 <tr>
-<td width="50%">
+<td width="33.33%">
 <p align="center"><strong>终端输出</strong></p>
 <img src="docs/assets/terminal_log.png" alt="终端输出" />
 </td>
-<td width="50%">
+<td width="33.33%">
 <p align="center"><strong>飞书通知</strong></p>
 <img src="docs/assets/feishu_zh.png" alt="飞书通知" />
+</td>
+<td width="33.33%">
+<p align="center"><strong>邮件推送</strong></p>
+<img src="docs/assets/email.png" alt="邮件推送" />
 </td>
 </tr>
 </table>
