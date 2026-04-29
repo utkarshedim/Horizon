@@ -1,16 +1,16 @@
 {
   "ai": {
     "provider": "anthropic",
-    "model": "claude-sonnet-4-20250514",
+    "model": "claude-haiku-4-5-20251001",
     "api_key_env": "ANTHROPIC_API_KEY",
     "languages": ["en"],
-    "throttle_sec": 2
+    "throttle_sec": 0
   },
   "sources": {
     "hackernews": {
       "enabled": true,
-      "fetch_top_stories": 30,
-      "min_score": 80
+      "fetch_top_stories": 15,
+      "min_score": 100
     },
     "rss": [
       {
@@ -26,62 +26,8 @@
         "category": "ai"
       },
       {
-        "name": "MIT Tech Review AI",
-        "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
-        "enabled": true,
-        "category": "ai"
-      },
-      {
         "name": "Ars Technica AI",
         "url": "https://arstechnica.com/ai/feed/",
-        "enabled": true,
-        "category": "ai"
-      },
-      {
-        "name": "OpenAI Blog",
-        "url": "https://openai.com/blog/rss/",
-        "enabled": true,
-        "category": "ai-labs"
-      },
-      {
-        "name": "Google AI Blog",
-        "url": "https://blog.google/technology/ai/rss/",
-        "enabled": true,
-        "category": "ai-labs"
-      },
-      {
-        "name": "Anthropic Blog",
-        "url": "https://www.anthropic.com/feed.xml",
-        "enabled": true,
-        "category": "ai-labs"
-      },
-      {
-        "name": "Meta AI Blog",
-        "url": "https://ai.meta.com/blog/rss/",
-        "enabled": true,
-        "category": "ai-labs"
-      },
-      {
-        "name": "Hugging Face Blog",
-        "url": "https://huggingface.co/blog/feed.xml",
-        "enabled": true,
-        "category": "ai-labs"
-      },
-      {
-        "name": "DeepMind Blog",
-        "url": "https://deepmind.google/blog/rss.xml",
-        "enabled": true,
-        "category": "ai-labs"
-      },
-      {
-        "name": "IEEE Spectrum Robotics",
-        "url": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
-        "enabled": true,
-        "category": "robotics"
-      },
-      {
-        "name": "IEEE Spectrum AI",
-        "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
         "enabled": true,
         "category": "ai"
       },
@@ -92,143 +38,18 @@
         "category": "ai"
       },
       {
-        "name": "arXiv cs.AI",
-        "url": "https://rss.arxiv.org/rss/cs.AI",
-        "enabled": true,
-        "category": "research"
-      },
-      {
-        "name": "arXiv cs.RO",
-        "url": "https://rss.arxiv.org/rss/cs.RO",
-        "enabled": true,
-        "category": "robotics-research"
-      },
-      {
-        "name": "MarkTechPost",
-        "url": "https://www.marktechpost.com/feed/",
-        "enabled": true,
-        "category": "ai"
-      },
-      {
-        "name": "The Robot Report",
-        "url": "https://www.therobotreport.com/feed/",
-        "enabled": true,
-        "category": "robotics"
-      },
-      {
-        "name": "Space.com",
-        "url": "https://www.space.com/feeds/all",
-        "enabled": true,
-        "category": "space"
-      },
-      {
-        "name": "NASA Breaking News",
-        "url": "https://www.nasa.gov/news-release/feed/",
-        "enabled": true,
-        "category": "space"
-      },
-      {
-        "name": "Quanta Magazine",
-        "url": "https://api.quantamagazine.org/feed/",
-        "enabled": true,
-        "category": "science"
-      },
-      {
-        "name": "Simon Willison",
-        "url": "https://simonwillison.net/atom/everything/",
-        "enabled": true,
-        "category": "ai-insider"
-      },
-      {
-        "name": "The Batch (Andrew Ng)",
-        "url": "https://www.deeplearning.ai/the-batch/feed/",
+        "name": "MIT Tech Review AI",
+        "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
         "enabled": true,
         "category": "ai"
       }
     ],
     "reddit": {
-      "enabled": true,
-      "fetch_comments": 5,
-      "subreddits": [
-        {
-          "subreddit": "artificial",
-          "sort": "hot",
-          "fetch_limit": 15,
-          "min_score": 50
-        },
-        {
-          "subreddit": "MachineLearning",
-          "sort": "hot",
-          "fetch_limit": 15,
-          "min_score": 30
-        },
-        {
-          "subreddit": "robotics",
-          "sort": "hot",
-          "fetch_limit": 10,
-          "min_score": 20
-        },
-        {
-          "subreddit": "singularity",
-          "sort": "hot",
-          "fetch_limit": 10,
-          "min_score": 100
-        },
-        {
-          "subreddit": "LocalLLaMA",
-          "sort": "hot",
-          "fetch_limit": 10,
-          "min_score": 50
-        },
-        {
-          "subreddit": "technology",
-          "sort": "hot",
-          "fetch_limit": 10,
-          "min_score": 200
-        },
-        {
-          "subreddit": "QuantumComputing",
-          "sort": "hot",
-          "fetch_limit": 10,
-          "min_score": 15
-        },
-        {
-          "subreddit": "spacex",
-          "sort": "hot",
-          "fetch_limit": 10,
-          "min_score": 100
-        }
-      ]
-    },
-    "github": [
-      {
-        "type": "repo_releases",
-        "owner": "openai",
-        "repo": "openai-python",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "anthropics",
-        "repo": "anthropic-sdk-python",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "huggingface",
-        "repo": "transformers",
-        "enabled": true
-      },
-      {
-        "type": "repo_releases",
-        "owner": "meta-llama",
-        "repo": "llama",
-        "enabled": true
-      }
-    ]
+      "enabled": false
+    }
   },
   "filtering": {
-    "ai_score_threshold": 6.5,
-    "time_window_hours": 26
+    "ai_score_threshold": 6.0,
+    "time_window_hours": 24
   }
 }
